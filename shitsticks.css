@@ -1,0 +1,102 @@
+@import url('//fonts.googleapis.com/css?family=Chewy');
+body {
+  background: #fff;
+  margin: 0 0;
+  overflow: hidden;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ff4814;
+  width: 100vw;
+  height: 100vh;
+  overflow:hidden;
+}
+
+h1 {
+  margin: 1vw 0;
+  padding: 0;
+  color: #666;
+  font-size: 6vw;
+  font-family: 'Chewy', sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  position: absolute;
+  left: 0%;
+  top: 5vw;
+}
+
+.heart {
+  position:absolute;
+  width: 25vw;
+  height: 22.5vw;
+  left:38.5vw;
+  top:40vh;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 12.5vw;
+  top: 0;
+  width: 12.5vw;
+  height: 20vw;
+  background: #fff;
+  border-radius: 10vw 10vw 0 0;
+  transform: rotate(-46deg);
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.heart1 {
+  animation: heart-anim 1s linear .4s infinite;
+}
+
+.heart2 {
+  animation: pounding .5s linear infinite alternate;
+}
+
+.heart1:after,
+.heart1:before {
+  background-color: #f44;
+}
+
+@keyframes pounding {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes heart-anim {
+  46% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  52% {
+    transform: scale(1.5);
+  }
+  55% {
+    transform: scale(3);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(50);
+  }
+}
